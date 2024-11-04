@@ -40,7 +40,7 @@ const Banner = () => {
 
       {/* Additional Description */}
       <div className="absolute bottom-8 z-10 text-center">
-        <p className="text-gray-300 text-lg md:text-base animate-fade-in-delay">
+        <p className="text-gray-300 text-sm md:text-base lg:text-lg animate-fade-in-delay">
           Join us to learn, innovate, and secure a safer digital world.
         </p>
       </div>
