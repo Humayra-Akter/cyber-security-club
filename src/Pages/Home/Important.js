@@ -81,18 +81,18 @@ import React from "react";
 
 const Important = () => {
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-6">
+    <div className="relative h-[600px] flex flex-col items-center justify-center bg-gray-900 text-white px-6">
       {/* Background Overlay for Subtle Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-800 to-transparent opacity-80"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-transparent opacity-90"></div>
 
       {/* Animated Heading */}
-      <h1 className="relative text-5xl md:text-7xl font-extrabold mb-6 z-10 animate-glow">
+      <h1 className="relative text-5xl md:text-6xl font-extrabold mb-6 z-10 animate-glow">
         Why Cyber Security Is Important?
       </h1>
 
       {/* Decorative Lines */}
-      <div className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-green-500 via-transparent to-transparent animate-expand"></div>
-      <div className="absolute bottom-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-transparent to-green-500 animate-expand-reverse"></div>
+      <div className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-green-700 via-transparent to-transparent animate-expand"></div>
+      <div className="absolute bottom-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-transparent to-green-800 animate-expand-reverse"></div>
 
       {/* Paragraph Section */}
       <div className="relative z-10 text-center max-w-4xl">
