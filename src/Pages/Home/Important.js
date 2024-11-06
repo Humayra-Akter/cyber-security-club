@@ -1,82 +1,3 @@
-// import React from "react";
-// import imp1 from "../../images/imp-1.png";
-// import imp2 from "../../images/imp-2.jpg";
-// import imp3 from "../../images/imp-3.png";
-// import imp4 from "../../images/imp-4.png";
-
-// const Important = () => {
-//   return (
-//     // <div className='bg-gradient-to-r from-secondary to-primary'>
-//     <div>
-//       <h1 className="text-black font-bold text-3xl pt-32 pb-6 text-center">
-//         Why Cyber Security Is Important?
-//       </h1>
-//       <div className="lg:flex p-10">
-//         <div class="card p-10 w-96 border-l-primary">
-//           <figure>
-//             <img src={imp1} alt="cyber issue" />
-//           </figure>
-//           <h1 className="text-green-900 font-bold text-xl pt-8 pb-12 text-center">
-//             Cyber Bullying
-//           </h1>
-//           <p>
-//             Cyber bullying is bullying that takes place over digital devices
-//             like cell phones, computers, and tablets. Cyberbullying can occur
-//             through SMS, Text, and apps, or online in social media, forums, or
-//             gaming where people can view, participate in, or share content.{" "}
-//           </p>
-//         </div>
-//         <div class="card p-10 w-96">
-//           <figure>
-//             <img src={imp2} alt="cyber issue" />
-//           </figure>
-//           <h1 className="text-green-900 font-bold text-xl pt-8 pb-12 text-center">
-//             Data Thrifting
-//           </h1>
-//           <p>
-//             Thrifted items could be very, VERY old. But you can also
-//             occasionally find brand new items at thrift stores . In my opinion,
-//             what makes thrifting so special is that you aren’t really going
-//             thrifting with the intent of buying one specific item because you
-//             never know what you are going to find! It’s like treasure hunting.
-//           </p>
-//         </div>
-//         <div class="card p-10 w-96">
-//           <figure>
-//             <img src={imp3} alt="cyber issue" />
-//           </figure>
-//           <h1 className="text-green-900 font-bold text-xl pt-8 pb-12 text-center">
-//             Cyber Attacks
-//           </h1>
-//           <p>
-//             A cyber attack is any attempt to gain unauthorized access to a
-//             computer, computing system or computer network with the intent to
-//             cause damage. Cyber attacks aim to disable, disrupt, destroy or
-//             control computer systems or to alter, block, delete, manipulate or
-//             steal the data held within these systems.
-//           </p>
-//         </div>
-//         <div class="card p-10 w-96">
-//           <figure>
-//             <img src={imp4} alt="cyber issue" />
-//           </figure>
-//           <h1 className="text-green-900 font-bold text-xl pt-8 pb-12 text-center">
-//             Phishing
-//           </h1>
-//           <p>
-//             Phishing is a cybercrime in which a target or targets are contacted
-//             by email, telephone or text message by someone posing as a
-//             legitimate institution to lure individuals into providing sensitive
-//             data such as personally identifiable information, banking and credit
-//             card details, and passwords.
-//           </p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Important;
 import React from "react";
 
 const Important = () => {
@@ -86,7 +7,7 @@ const Important = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-transparent opacity-90"></div>
 
       {/* Animated Heading */}
-      <h1 className="relative text-5xl md:text-6xl font-extrabold mb-6 z-10 animate-glow">
+      <h1 className="relative text-5xl md:text-6xl font-extrabold mb-6 z-50 animate-glow">
         Why Cyber Security Is Important?
       </h1>
 
@@ -117,16 +38,16 @@ const Important = () => {
       <style jsx>{`
         @keyframes glow {
           0% {
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7),
-              0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.7);
+            text-shadow: 0 0 10px rgba(0, 200, 0, 0.7),
+              0 0 20px rgba(0, 200, 0, 0.7), 0 0 30px rgba(0, 200, 0, 0.7);
           }
           50% {
-            text-shadow: 0 0 20px rgba(0, 255, 0, 1),
-              0 0 40px rgba(0, 255, 0, 1), 0 0 60px rgba(0, 255, 0, 1);
+            text-shadow: 0 0 20px rgba(0, 200, 0, 1),
+              0 0 40px rgba(0, 200, 0, 1), 0 0 60px rgba(0, 200, 0, 1);
           }
           100% {
-            text-shadow: 0 0 10px rgba(0, 255, 0, 0.7),
-              0 0 20px rgba(0, 255, 0, 0.7), 0 0 30px rgba(0, 255, 0, 0.7);
+            text-shadow: 0 0 10px rgba(0, 200, 0, 0.7),
+              0 0 20px rgba(0, 200, 0, 0.7), 0 0 30px rgba(0, 200, 0, 0.7);
           }
         }
 
@@ -183,4 +104,3 @@ const Important = () => {
 };
 
 export default Important;
-
