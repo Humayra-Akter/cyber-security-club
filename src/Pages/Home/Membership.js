@@ -1,11 +1,30 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaRocket, FaCheckCircle } from "react-icons/fa";
 
 const Membership = () => {
-  const [scrollY, setScrollY] = useState(0);
+  const [rocketPosition, setRocketPosition] = useState(0);
+  const membershipRef = useRef(null);
 
   const handleScroll = () => {
-    setScrollY(window.scrollY);
+    if (membershipRef.current) {
+      const { top, bottom, height } =
+        membershipRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      // Calculate the percentage of the component that's currently visible
+      if (top < viewportHeight && bottom > 0) {
+        const visiblePart = Math.min(viewportHeight - top, height);
+        const scrolledRatio =
+          (viewportHeight - top) / (viewportHeight + height);
+        setRocketPosition(scrolledRatio * height);
+      } else if (bottom <= 0) {
+        // When the component has scrolled out of view, set position to the end
+        setRocketPosition(height);
+      } else {
+        // Before the component is fully in view, reset position to the start
+        setRocketPosition(0);
+      }
+    }
   };
 
   useEffect(() => {
@@ -40,21 +59,23 @@ const Membership = () => {
   ];
 
   return (
-    <div className="relative bg-gray-900 text-white py-20 px-4 lg:px-16">
+    <div
+      ref={membershipRef}
+      className="relative bg-gray-900 text-white py-20 px-4 lg:px-16 overflow-hidden"
+    >
       <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-green-400 animate-fade-in">
         Membership Plans & Perks
       </h2>
 
       {/* Rocket Animation */}
-      <div className="fixed left-5 top-1/2 transform -translate-y-1/2 z-10">
-        <FaRocket
-          style={{
-            fontSize: "2rem",
-            color: "#FF5722",
-            transform: `translateY(${scrollY * 0.5}px)`,
-            transition: "transform 0.1s ease-in-out",
-          }}
-        />
+      <div
+        className="absolute left-5 top-0 z-10"
+        style={{
+          transform: `translateY(${rocketPosition}px)`,
+          transition: "transform 0.1s ease-out",
+        }}
+      >
+        <FaRocket className="text-2xl text-red-500" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
