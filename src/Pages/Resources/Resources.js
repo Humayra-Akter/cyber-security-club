@@ -1,6 +1,10 @@
-import React from "react";
+// Resources.js
+import React, { useState } from "react";
+import RegisterPopup from "./RegisterPopup";
 
 const Resources = () => {
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
   const resources = [
     {
       id: 1,
@@ -119,62 +123,23 @@ const Resources = () => {
                 cursor: "pointer",
                 transition: "transform 0.3s ease",
               }}
+              onClick={() => setIsPopupVisible(true)}
             >
               Register to Access
             </button>
-
-            {/* Cyber Animation Effect */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                background:
-                  "linear-gradient(135deg, transparent, rgba(0, 255, 255, 0.2), transparent)",
-                opacity: 0.3,
-                animation: "cyber-glow 6s linear infinite",
-              }}
-            ></div>
           </div>
         ))}
       </div>
 
-      {/* Background Grid Animation */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundImage:
-            "radial-gradient(circle, rgba(0,255,255,0.05) 1px, transparent 1px)",
-          backgroundSize: "30px 30px",
-          zIndex: 0,
-        }}
-      ></div>
+      {isPopupVisible && (
+        <RegisterPopup onClose={() => setIsPopupVisible(false)} />
+      )}
 
-      {/* Inline CSS for animations */}
       <style jsx>{`
-        @keyframes cyber-glow {
-          0% {
-            transform: translateX(-100%) skewX(-20deg);
-          }
-          50% {
-            transform: translateX(100%) skewX(20deg);
-          }
-          100% {
-            transform: translateX(-100%) skewX(-20deg);
-          }
-        }
-
         .resource-card:hover {
           transform: scale(1.05);
           box-shadow: 0 12px 24px rgba(0, 255, 255, 0.2);
         }
-
         button:hover {
           transform: translateY(-3px);
         }
