@@ -19,7 +19,7 @@ const Banner = () => {
         {[...Array(15)].map((_, index) => (
           <div
             key={index}
-            className={`absolute bg-green-500 opacity-60 w-[2px] h-full animate-flicker line-${index}`}
+            className={`absolute bg-[#66fcf1] opacity-60 w-[2px] h-full animate-flicker line-${index}`}
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
@@ -30,7 +30,10 @@ const Banner = () => {
       </div>
       {/* Main Text */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up">
+        <h1
+          style={{ color: "#66fcf1" }}
+          className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up"
+        >
           Welcome to CyberSec Club
         </h1>
         <p className="text-lg md:text-2xl max-w-lg mx-auto animate-fade-in">

@@ -84,7 +84,10 @@ const Testimonials = () => {
         </button>
       </div>
 
-      <div className="relative w-full max-w-4xl mx-auto p-8 bg-gradient-to-br from-gray-800 to-green-700 rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out scale-95 hover:scale-100">
+      <div
+        className="relative w-full max-w-4xl mx-auto p-8 bg-gradient-to-br from-gray-800 to-[#66fcf1] rounded-lg shadow-lg overflow-hidden transform transition duration-500 ease-in-out scale-95 hover:scale-100"
+        style={{ animation: "fadeIn 1s ease-in-out" }}
+      >
         {/* Background Glow Effect */}
         <div className="absolute -inset-3 rounded-lg bg-gradient-to-r from-green-500 via-blue-500 to-blue-500 opacity-30 blur-lg"></div>
 
@@ -129,7 +132,16 @@ const Testimonials = () => {
             transform: scale(1);
           }
         }
-
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
         .animate-glow {
           animation: glow 10s ease-in-out infinite;
         }

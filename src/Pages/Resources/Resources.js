@@ -52,7 +52,8 @@ const Resources = () => {
         style={{
           fontSize: "2.5rem",
           color: "#66fcf1",
-          marginBottom: "30px",
+          marginBottom: "20px",
+          marginTop: "40px",
           position: "relative",
           zIndex: 1,
         }}
@@ -117,8 +118,8 @@ const Resources = () => {
                 padding: "10px 20px",
                 borderRadius: "5px",
                 border: "none",
-                backgroundColor: "#45a29e",
-                color: "#0f0f0f",
+                backgroundColor: "#1c6f6a",
+                color: "#66fcf1",
                 fontWeight: "bold",
                 cursor: "pointer",
                 transition: "transform 0.3s ease",

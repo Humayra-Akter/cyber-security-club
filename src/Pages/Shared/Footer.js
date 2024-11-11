@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer class="footer footer-center p-4 bg-gradient-to-br from-gray-800 to-green-700 rounded-lg text-white">
+    <footer class="footer footer-center p-4 bg-gradient-to-r from-gray-900 via-[#1c6f6a] to-transparent rounded-t-xl text-white">
       <div>
         <p>
           Copyright ©{new Date().getFullYear()}- All right reserved by ACME

@@ -4,7 +4,7 @@ const Important = () => {
   return (
     <div className="relative h-[600px] flex flex-col items-center justify-center bg-gray-900 text-white px-6">
       {/* Background Overlay for Subtle Glow Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-green-900 to-transparent opacity-90"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1c6f6a] to-transparent opacity-90"></div>
 
       {/* Animated Heading */}
       <h1 className="relative text-5xl md:text-6xl font-extrabold mb-6 z-50 animate-glow">
