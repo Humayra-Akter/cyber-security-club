@@ -10,37 +10,25 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-lg">
+    <nav className="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-green-700 font-bold text-xl">CyberSec Club</div>
+        <div style={{ color: "#66fcf1" }} className="font-bold text-xl">
+          CyberSec Club
+        </div>
 
         {/* Navigation Links */}
         <div className="hidden md:flex space-x-6 items-center">
-          <Link
-            to="#home"
-            className="hover:text-green-700 transition duration-300"
-          >
-            Home
-          </Link>
-          <Link
-            to="#resources"
-            className="hover:text-green-700 transition duration-300"
-          >
-            Resources
-          </Link>
-          <Link
-            to="#events"
-            className="hover:text-green-700 transition duration-300"
-          >
-            Events
-          </Link>
-          <Link
-            to="#contact"
-            className="hover:text-green-700 transition duration-300"
-          >
-            Contact
-          </Link>
+          {["Home", "Resources", "Events", "Contact"].map((item, index) => (
+            <Link
+              key={index}
+              to={`/${item.toLowerCase()}`}
+              className="hover:text-gray-200 transition transform duration-300 hover:scale-105"
+              style={{ color: "#66fcf1" }}
+            >
+              {item}
+            </Link>
+          ))}
         </div>
 
         {/* Dropdown and Icons */}
@@ -49,34 +37,46 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="flex items-center space-x-2 text-white hover:text-green-700 transition duration-300 focus:outline-none"
+              className="flex items-center space-x-2 text-white transition transform duration-300 hover:scale-105"
+              style={{ color: "#66fcf1" }}
             >
               <FaUser className="text-lg" />
               <span>Profile</span>
               <FaChevronDown className="text-sm" />
             </button>
             {isDropdownOpen && (
-              <ul className="absolute right-0 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40">
+              <ul
+                className="fixed right-4 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40 transition-transform transform duration-500 ease-out"
+                style={{
+                  transform: isDropdownOpen
+                    ? "translateY(0)"
+                    : "translateY(-10px)",
+                  opacity: isDropdownOpen ? 1 : 0,
+                }}
+              >
                 <li>
                   <Link
-                    to="#profile"
-                    className="block px-4 py-2 hover:bg-gray-700 hover:text-green-700 transition duration-300"
+                    to="/profile"
+                    style={{ color: "#66fcf1" }}
+                    className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
                   >
                     My Profile
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="#settings"
-                    className="block px-4 py-2 hover:bg-gray-700 hover:text-green-700 transition duration-300"
+                    to="/settings"
+                    className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
+                    style={{ color: "#66fcf1" }}
                   >
                     Settings
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="#logout"
-                    className="block px-4 py-2 hover:bg-gray-700 hover:text-green-700 transition duration-300"
+                    to="/logout"
+                    className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
+                    style={{ color: "#66fcf1" }}
                   >
                     Logout
                   </Link>
@@ -87,14 +87,16 @@ const Navbar = () => {
 
           {/* Icons */}
           <Link
-            to="#home"
-            className="text-white hover:text-green-700 transition duration-300"
+            to="/home"
+            style={{ color: "#66fcf1" }}
+            className="text-white transition transform duration-300 hover:scale-105"
           >
             <FaHome className="text-xl" />
           </Link>
           <Link
-            to="#settings"
-            className="text-white hover:text-green-700 transition duration-300"
+            to="/settings"
+            style={{ color: "#66fcf1" }}
+            className="text-white transition transform duration-300 hover:scale-105"
           >
             <FaCog className="text-xl" />
           </Link>
