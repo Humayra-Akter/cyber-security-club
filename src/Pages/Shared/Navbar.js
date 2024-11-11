@@ -1,32 +1,67 @@
 import React, { useState } from "react";
 import { FaHome, FaUser, FaCog, FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const location = useLocation();
+
+  // Get the index of the currently active link based on the route
+  const activeIndex = ["home", "resources", "events", "contact"].indexOf(
+    location.pathname.split("/")[1]
+  );
+
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const menuItems = [
+    { name: "Home", path: "/home" },
+    { name: "Resources", path: "/resources" },
+    { name: "Events", path: "/events" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
     <nav className="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div style={{ color: "#66fcf1" }} className="font-bold text-xl">
+
+        <Link
+          to="/home"
+          style={{ color: "#66fcf1" }}
+          className="font-bold text-xl"
+        >
           CyberSec Club
-        </div>
+        </Link>
 
         {/* Navigation Links */}
-        <div className="hidden md:flex space-x-6 items-center">
-          {["Home", "Resources", "Events", "Contact"].map((item, index) => (
+        <div className="relative hidden md:flex space-x-6 items-center">
+          {menuItems.map((item, index) => (
             <Link
               key={index}
-              to={`/${item.toLowerCase()}`}
-              className="hover:text-gray-200 transition transform duration-300 hover:scale-105"
-              style={{ color: "#66fcf1" }}
+              to={item.path}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className={`relative px-2 py-1 transition duration-300 ${
+                index === activeIndex || index === hoveredIndex
+                  ? "text-white"
+                  : "text-gray-400"
+              }`}
+              style={{ color: index === activeIndex ? "#66fcf1" : undefined }}
             >
-              {item}
+              {item.name}
+              {/* Underline bar */}
+              {(hoveredIndex === index || activeIndex === index) && (
+                <span
+                  className="absolute left-0 bottom-0 h-0.5 bg-[#66fcf1] transition-all duration-300 ease-in-out"
+                  style={{
+                    width: "100%",
+                  }}
+                />
+              )}
             </Link>
           ))}
         </div>
@@ -37,7 +72,7 @@ const Navbar = () => {
           <div className="relative">
             <button
               onClick={toggleDropdown}
-              className="flex items-center space-x-2 text-white transition transform duration-300 hover:scale-105"
+              className="flex items-center space-x-2 transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
               style={{ color: "#66fcf1" }}
             >
               <FaUser className="text-lg" />
@@ -46,19 +81,16 @@ const Navbar = () => {
             </button>
             {isDropdownOpen && (
               <ul
-                className="fixed right-4 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40 transition-transform transform duration-500 ease-out"
+                className="fixed right-4 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40 transition-opacity duration-300 ease-out"
                 style={{
-                  transform: isDropdownOpen
-                    ? "translateY(0)"
-                    : "translateY(-10px)",
                   opacity: isDropdownOpen ? 1 : 0,
                 }}
               >
                 <li>
                   <Link
                     to="/profile"
-                    style={{ color: "#66fcf1" }}
                     className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
+                    style={{ color: "#66fcf1" }}
                   >
                     My Profile
                   </Link>
@@ -85,18 +117,16 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Icons */}
+          {/* Icons with hover effect */}
           <Link
             to="/home"
-            style={{ color: "#66fcf1" }}
-            className="text-white transition transform duration-300 hover:scale-105"
+            className="text-white transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
           >
             <FaHome className="text-xl" />
           </Link>
           <Link
             to="/settings"
-            style={{ color: "#66fcf1" }}
-            className="text-white transition transform duration-300 hover:scale-105"
+            className="text-white transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
           >
             <FaCog className="text-xl" />
           </Link>
