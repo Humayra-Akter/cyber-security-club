@@ -41,7 +41,10 @@ const MembershipBenefit = () => {
 
   return (
     <div className="bg-gray-900 text-gray-100 py-12 px-6 lg:px-16">
-      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-green-400 animate-fade-in">
+      <h2
+        style={{ color: "#66fcf1" }}
+        className="text-3xl lg:text-4xl font-bold text-center mb-12 animate-fade-in"
+      >
         Membership Benefits
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -50,8 +53,13 @@ const MembershipBenefit = () => {
             key={index}
             className="p-6 bg-gray-800 rounded-lg shadow-md flex flex-col items-center text-center space-y-4 transform transition duration-300 hover:scale-105"
           >
-            <div className="text-5xl text-green-400">{benefit.icon}</div>
-            <h3 className="text-xl font-semibold text-green-300">
+            <div style={{ color: "#66fcf1" }} className="text-5xl">
+              {benefit.icon}
+            </div>
+            <h3
+              style={{ color: "#66fcf1" }}
+              className="text-xl font-semibold"
+            >
               {benefit.title}
             </h3>
             <p className="text-gray-300">{benefit.description}</p>

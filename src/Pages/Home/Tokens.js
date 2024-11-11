@@ -39,10 +39,13 @@ const Tokens = () => {
           key={index}
           className="p-8 text-center bg-gray-800 rounded-lg shadow-md flex-1 flex flex-col items-center space-y-4"
         >
-          <div className="text-green-400 text-5xl animate-pulse">
+          <div
+            style={{ color: "#66fcf1" }}
+            className="text-5xl animate-pulse"
+          >
             {stat.icon}
           </div>
-          <h1 className="text-green-400 font-bold text-4xl">
+          <h1 style={{ color: "#66fcf1" }} className=" font-bold text-4xl">
             <CountUp
               start={0}
               end={stat.end}

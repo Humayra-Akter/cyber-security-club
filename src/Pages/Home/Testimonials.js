@@ -60,7 +60,10 @@ const Testimonials = () => {
 
   return (
     <div className="relative flex flex-col items-center py-20 bg-gray-900 text-white overflow-hidden">
-      <h2 className="text-3xl font-bold text-center text-green-300 mb-12">
+      <h2
+        style={{ color: "#66fcf1" }}
+        className="text-3xl font-bold text-center mb-12"
+      >
         What Our Clients Say
       </h2>
 
@@ -68,7 +71,8 @@ const Testimonials = () => {
       <div className="flex justify-between w-full max-w-5xl">
         <button
           onClick={handlePrev}
-          className="text-3xl text-green-400 hover:text-green-200 focus:outline-none"
+          style={{ color: "#66fcf1" }}
+          className="text-3xl hover:text-green-200 focus:outline-none"
         >
           <FaChevronLeft />
         </button>

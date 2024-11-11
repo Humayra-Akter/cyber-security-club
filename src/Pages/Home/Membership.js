@@ -63,7 +63,10 @@ const Membership = () => {
       ref={membershipRef}
       className="relative bg-gray-900 text-white py-20 px-4 lg:px-16 overflow-hidden"
     >
-      <h2 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-green-400 animate-fade-in">
+      <h2
+        style={{ color: "#66fcf1" }}
+        className="text-3xl lg:text-4xl font-bold text-center mb-12 animate-fade-in"
+      >
         Membership Plans & Perks
       </h2>
 
@@ -84,19 +87,25 @@ const Membership = () => {
             key={index}
             className="relative bg-gray-800 rounded-lg shadow-lg p-8 flex flex-col items-center text-center transform transition duration-300 hover:scale-105"
           >
-            <h3 className="text-2xl font-bold text-green-300 mb-4">
+            <h3
+              style={{ color: "#66fcf1" }}
+              className="text-2xl font-bold  mb-4"
+            >
               {membership.type}
             </h3>
             <p className="text-lg mb-4 text-gray-300">
               {membership.description}
             </p>
-            <h4 className="text-3xl font-bold text-green-400 mb-4">
+            <h4
+              style={{ color: "#66fcf1" }}
+              className="text-3xl font-bold mb-4"
+            >
               {membership.price}
             </h4>
             <ul className="text-left text-gray-300 space-y-2 mb-6">
               {membership.perks.map((perk, i) => (
                 <li key={i} className="flex items-center space-x-2">
-                  <FaCheckCircle className="text-green-400" />
+                  <FaCheckCircle style={{ color: "#66fcf1" }} />
                   <span>{perk}</span>
                 </li>
               ))}
