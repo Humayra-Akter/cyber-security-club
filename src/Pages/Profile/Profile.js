@@ -29,7 +29,15 @@ const Profile = () => {
         >
           <FiEdit />
         </button>
-        <h2 className="text-3xl font-bold" style={{ color: "#66fcf1" }}>
+        <h2
+          style={{
+            fontSize: "2.5rem",
+            color: "#66fcf1",
+            marginBottom: "20px",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+        >
           Alex Johnson
         </h2>
         <p className="text-gray-400 text-lg">
@@ -51,7 +59,17 @@ const Profile = () => {
 
       {/* About Section */}
       <div className="mt-12 max-w-3xl mx-auto text-center">
-        <h3 className="text-2xl font-semibold text-[#66fcf1]">About Me</h3>
+        <h3
+          style={{
+            fontSize: "2rem",
+            color: "#66fcf1",
+            marginBottom: "20px",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+        >
+          About Me
+        </h3>
         <p className="text-gray-400 mt-4">
           Enthusiastic software engineer with a passion for developing
           innovative programs. Experienced in both frontend and backend
@@ -62,7 +80,15 @@ const Profile = () => {
 
       {/* Skills Section */}
       <div className="mt-12 max-w-4xl mx-auto">
-        <h3 className="text-2xl font-semibold text-center text-[#66fcf1] mb-6">
+        <h3
+          style={{
+            fontSize: "2rem",
+            color: "#66fcf1",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+          className=" text-center mb-6"
+        >
           Skills & Expertise
         </h3>
         <Skills />
@@ -70,7 +96,15 @@ const Profile = () => {
 
       {/* Achievements Section */}
       <div className="mt-12 max-w-4xl mx-auto">
-        <h3 className="text-2xl font-semibold text-center text-[#66fcf1] mb-6">
+        <h3
+          style={{
+            fontSize: "2rem",
+            color: "#66fcf1",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+          className="text-center mb-6"
+        >
           Achievements & Projects
         </h3>
         <Achievements />
@@ -78,7 +112,15 @@ const Profile = () => {
 
       {/* Experience Timeline */}
       <div className="mt-12 max-w-4xl mx-auto text-center">
-        <h3 className="text-2xl font-semibold text-center text-[#66fcf1] mb-6">
+        <h3
+          style={{
+            fontSize: "2rem",
+            color: "#66fcf1",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+          className="mb-6"
+        >
           Experience Timeline
         </h3>
         <div className="relative mt-4 flex items-center justify-center space-x-8 px-4 py-2">
@@ -108,7 +150,15 @@ const Profile = () => {
 
       {/* Testimonials */}
       <div className="mt-12 max-w-4xl mx-auto text-center">
-        <h3 className="text-2xl font-semibold text-[#66fcf1] mb-4">
+        <h3
+          style={{
+            fontSize: "2rem",
+            color: "#66fcf1",
+            marginTop: "40px",
+            zIndex: 1,
+          }}
+          className="mb-4"
+        >
           Testimonials
         </h3>
         <p className="text-gray-400">

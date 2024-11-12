@@ -64,8 +64,12 @@ const Membership = () => {
       className="relative bg-gray-900 text-white py-20 px-4 lg:px-16 overflow-hidden"
     >
       <h2
-        style={{ color: "#66fcf1" }}
-        className="text-3xl lg:text-4xl font-bold text-center mb-12 animate-fade-in"
+        style={{
+          color: "#66fcf1",
+          marginTop: "40px",
+          zIndex: 1,
+        }}
+        className="text-3xl lg:text-4xl text-center mb-12 animate-fade-in"
       >
         Membership Plans & Perks
       </h2>

@@ -45,7 +45,6 @@ const Resources = () => {
         backgroundColor: "#0f0f0f",
         minHeight: "100vh",
         textAlign: "center",
-        position: "relative",
       }}
     >
       <h1
@@ -54,7 +53,6 @@ const Resources = () => {
           color: "#66fcf1",
           marginBottom: "20px",
           marginTop: "40px",
-          position: "relative",
           zIndex: 1,
         }}
       >
@@ -77,7 +75,6 @@ const Resources = () => {
           gap: "20px",
           maxWidth: "1000px",
           margin: "0 auto",
-          position: "relative",
           zIndex: 1,
         }}
       >
@@ -91,7 +88,6 @@ const Resources = () => {
               boxShadow: "0 8px 16px rgba(0, 255, 255, 0.1)",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
               overflow: "hidden",
-              position: "relative",
             }}
             className="resource-card"
           >

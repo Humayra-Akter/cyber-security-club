@@ -61,8 +61,12 @@ const Testimonials = () => {
   return (
     <div className="relative flex flex-col items-center py-20 bg-gray-900 text-white overflow-hidden">
       <h2
-        style={{ color: "#66fcf1" }}
-        className="text-3xl font-bold text-center mb-12"
+        style={{
+          color: "#66fcf1",
+          marginTop: "40px",
+          zIndex: 1,
+        }}
+        className="text-3xl text-center mb-12"
       >
         What Our Clients Say
       </h2>

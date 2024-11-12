@@ -7,7 +7,13 @@ const Important = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-[#1c6f6a] to-transparent opacity-90"></div>
 
       {/* Animated Heading */}
-      <h1 className="relative text-5xl md:text-6xl font-extrabold mb-6 z-50 animate-glow">
+      <h1
+        style={{
+          color: "#66fcf1",
+          zIndex: 1,
+        }}
+        className="relative text-5xl lg:text-6xl mb-6 z-50 animate-glow"
+      >
         Why Cyber Security Is Important?
       </h1>
 
@@ -16,7 +22,9 @@ const Important = () => {
       <div className="absolute bottom-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-transparent to-green-800 animate-expand-reverse"></div>
 
       {/* Paragraph Section */}
-      <div className="relative z-10 text-center max-w-4xl">
+      <div
+        className="relative z-10 text-center max-w-4xl"
+      >
         <p className="text-lg md:text-2xl mb-6 opacity-0 animate-fade-in">
           Cybersecurity plays a crucial role in today's interconnected world.
           With the surge in digital activities, it protects sensitive data from

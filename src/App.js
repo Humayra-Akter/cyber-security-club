@@ -7,6 +7,7 @@ import Resources from "./Pages/Resources/Resources";
 import Events from "./Pages/Events/Events";
 import Contact from "./Pages/Contact/Contact";
 import Profile from "./Pages/Profile/Profile";
+import Settings from "./Pages/Settings/Settings";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/settings" element={<Settings />} />
       </Routes>
       <Footer></Footer>
     </div>

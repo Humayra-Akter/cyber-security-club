@@ -42,7 +42,6 @@ const Events = () => {
           fontSize: "2.5rem",
           color: "#66fcf1",
           marginTop: "10px",
-          position: "relative",
           zIndex: 1,
         }}
         className="text-center mb-12"

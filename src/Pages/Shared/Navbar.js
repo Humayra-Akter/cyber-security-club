@@ -17,6 +17,10 @@ const Navbar = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
+  const closeDropdown = () => {
+    setIsDropdownOpen(false);
+  };
+
   const menuItems = [
     { name: "Home", path: "/home" },
     { name: "Resources", path: "/resources" },
@@ -28,7 +32,6 @@ const Navbar = () => {
     <nav className="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-
         <Link
           to="/home"
           style={{ color: "#66fcf1" }}
@@ -37,7 +40,7 @@ const Navbar = () => {
           CyberSec Club
         </Link>
 
-        {/* Navigation Links */}
+        {/* Navigation Links (Visible on large screens) */}
         <div className="relative hidden md:flex space-x-6 items-center">
           {menuItems.map((item, index) => (
             <Link
@@ -66,10 +69,10 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Dropdown and Icons */}
+        {/* Dropdown Menu and Icons */}
         <div className="flex items-center space-x-4">
-          {/* Dropdown Menu */}
-          <div className="relative">
+          {/* Dropdown for small/medium screens */}
+          <div className="relative md:hidden">
             <button
               onClick={toggleDropdown}
               className="flex items-center space-x-2 transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
@@ -81,25 +84,29 @@ const Navbar = () => {
             </button>
             {isDropdownOpen && (
               <ul
-                className="fixed right-4 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40 transition-opacity duration-300 ease-out"
+                className="absolute right-0 mt-2 bg-gray-800 text-white shadow-lg rounded-md w-40 transition-opacity duration-300 ease-out"
                 style={{
                   opacity: isDropdownOpen ? 1 : 0,
                 }}
               >
-                <li>
-                  <Link
-                    to="/profile"
-                    className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
-                    style={{ color: "#66fcf1" }}
-                  >
-                    My Profile
-                  </Link>
-                </li>
+                {menuItems.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      to={item.path}
+                      className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
+                      style={{ color: "#66fcf1" }}
+                      onClick={closeDropdown} // Close dropdown after selecting an option
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
                 <li>
                   <Link
                     to="/settings"
                     className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
                     style={{ color: "#66fcf1" }}
+                    onClick={closeDropdown} // Close dropdown after selecting an option
                   >
                     Settings
                   </Link>
@@ -109,6 +116,7 @@ const Navbar = () => {
                     to="/logout"
                     className="block px-4 py-2 hover:bg-gray-700 transition duration-300"
                     style={{ color: "#66fcf1" }}
+                    onClick={closeDropdown} // Close dropdown after selecting an option
                   >
                     Logout
                   </Link>
@@ -117,19 +125,16 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Icons with hover effect */}
-          <Link
-            to="/home"
-            className="text-white transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
-          >
-            <FaHome className="text-xl" />
-          </Link>
-          <Link
-            to="/settings"
-            className="text-white transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
-          >
-            <FaCog className="text-xl" />
-          </Link>
+          {/* Visible on large screens only */}
+          <div className="hidden md:flex items-center space-x-4">
+            
+            <Link
+              to="/settings"
+              className="text-white transition transform duration-300 hover:scale-105 hover:text-[#66fcf1]"
+            >
+              <FaCog className="text-xl" />
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

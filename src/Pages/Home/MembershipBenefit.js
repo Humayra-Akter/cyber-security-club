@@ -42,8 +42,12 @@ const MembershipBenefit = () => {
   return (
     <div className="bg-gray-900 text-gray-100 py-12 px-6 lg:px-16">
       <h2
-        style={{ color: "#66fcf1" }}
-        className="text-3xl lg:text-4xl font-bold text-center mb-12 animate-fade-in"
+        style={{
+          color: "#66fcf1",
+          marginTop: "40px",
+          zIndex: 1,
+        }}
+        className="text-3xl lg:text-4xl text-center mb-12 animate-fade-in"
       >
         Membership Benefits
       </h2>
@@ -56,10 +60,7 @@ const MembershipBenefit = () => {
             <div style={{ color: "#66fcf1" }} className="text-5xl">
               {benefit.icon}
             </div>
-            <h3
-              style={{ color: "#66fcf1" }}
-              className="text-xl font-semibold"
-            >
+            <h3 style={{ color: "#66fcf1" }} className="text-xl font-semibold">
               {benefit.title}
             </h3>
             <p className="text-gray-300">{benefit.description}</p>

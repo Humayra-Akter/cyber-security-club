@@ -31,8 +31,11 @@ const Banner = () => {
       {/* Main Text */}
       <div className="relative z-10 text-center px-4">
         <h1
-          style={{ color: "#66fcf1" }}
-          className="text-4xl md:text-6xl font-bold mb-4 animate-fade-in-up"
+          style={{
+            color: "#66fcf1",
+            zIndex: 1,
+          }}
+          className="text-4xl md:text-6xl mb-4 animate-fade-in-up"
         >
           Welcome to CyberSec Club
         </h1>
