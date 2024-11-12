@@ -8,8 +8,14 @@ const Contact = () => {
     <div className="py-20 bg-gray-900 text-white px-6">
       {/* Header */}
       <h2
-        className="text-3xl font-bold text-center mb-12"
-        style={{ color: "#66fcf1" }}
+        className="text-center mb-12"
+        style={{
+          fontSize: "2.5rem",
+          color: "#66fcf1",
+          marginTop: "10px",
+          position: "relative",
+          zIndex: 1,
+        }}
       >
         Contact Us
       </h2>
@@ -65,7 +71,7 @@ const Contact = () => {
           <form className="space-y-4">
             <div>
               <label
-                className="block text-gray-400 text-sm mb-2"
+                className="block text-gray-200 text-sm mb-2"
                 htmlFor="name"
               >
                 Name
@@ -74,12 +80,12 @@ const Contact = () => {
                 type="text"
                 id="name"
                 placeholder="Your Name"
-                className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
+                className="w-full p-3 bg-gray-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
               />
             </div>
             <div>
               <label
-                className="block text-gray-400 text-sm mb-2"
+                className="block text-gray-200 text-sm mb-2"
                 htmlFor="email"
               >
                 Email
@@ -88,12 +94,12 @@ const Contact = () => {
                 type="email"
                 id="email"
                 placeholder="Your Email"
-                className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
+                className="w-full p-3 bg-gray-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
               />
             </div>
             <div>
               <label
-                className="block text-gray-400 text-sm mb-2"
+                className="block text-gray-200 text-sm mb-2"
                 htmlFor="message"
               >
                 Message
@@ -102,7 +108,7 @@ const Contact = () => {
                 id="message"
                 rows="4"
                 placeholder="Your Message"
-                className="w-full p-3 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
+                className="w-full p-3 bg-gray-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-[#66fcf1]"
               ></textarea>
             </div>
             <button

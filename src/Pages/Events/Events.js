@@ -38,8 +38,14 @@ const Events = () => {
   return (
     <div className="py-20 bg-gray-900 text-white">
       <h2
-        style={{ color: "#66fcf1" }}
-        className="text-3xl font-bold text-center mb-12"
+        style={{
+          fontSize: "2.5rem",
+          color: "#66fcf1",
+          marginTop: "10px",
+          position: "relative",
+          zIndex: 1,
+        }}
+        className="text-center mb-12"
       >
         Upcoming Events
       </h2>

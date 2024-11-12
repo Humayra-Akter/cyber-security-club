@@ -6,6 +6,7 @@ import Navbar from "./Pages/Shared/Navbar";
 import Resources from "./Pages/Resources/Resources";
 import Events from "./Pages/Events/Events";
 import Contact from "./Pages/Contact/Contact";
+import Profile from "./Pages/Profile/Profile";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/resources" element={<Resources />} />
         <Route path="/events" element={<Events />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer></Footer>
     </div>
