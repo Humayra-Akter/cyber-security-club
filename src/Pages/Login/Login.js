@@ -30,7 +30,7 @@ const Login = () => {
             left: `${i * 6}%`,
             width: "2px",
             height: "100%",
-            backgroundColor: "#66fcf1",
+            backgroundColor: "#1c6f6a",
             opacity: 0.3,
             animation: "fade-in-out 3s ease-in-out infinite",
             animationDelay: `${Math.random() * 2}s`,
