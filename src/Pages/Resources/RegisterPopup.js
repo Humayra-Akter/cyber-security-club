@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 const RegisterPopup = ({ onClose }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -37,7 +38,7 @@ const RegisterPopup = ({ onClose }) => {
           borderRadius: "10px",
           boxShadow: "0 8px 16px rgba(0, 255, 255, 0.2)",
           overflow: "hidden",
-          width: isExpanded ? "700px" : "400px", // Expands when isExpanded is true
+          width: isExpanded ? "700px" : "400px",
           transition: "width 0.5s ease",
           zIndex: 1000,
           height: isExpanded ? "350px" : "200px",
@@ -162,7 +163,20 @@ const RegisterPopup = ({ onClose }) => {
                 }}
               >
                 Register
-              </button>
+              </button>{" "}
+              <p
+                style={{
+                  color: "#c5c6c7",
+                  fontSize: "0.9rem",
+                  marginBottom: "20px",
+                  marginTop: 20,
+                }}
+              >
+                Already have an account?{" "}
+                <Link to="/login" style={{ color: "#66fcf1" }}>
+                  Login
+                </Link>
+              </p>
             </div>
           </div>
         )}
@@ -184,6 +198,22 @@ const RegisterPopup = ({ onClose }) => {
           &times;
         </button>
       </div>
+
+      {/* Media Query for Small Screen */}
+      <style jsx>{`
+        @media (max-width: 768px) {
+          .popup-container {
+            width: 90vw;
+            height: auto;
+            padding: 20px;
+          }
+
+          .benefits-card,
+          .registration-form {
+            width: 100%;
+          }
+        }
+      `}</style>
     </div>
   );
 };

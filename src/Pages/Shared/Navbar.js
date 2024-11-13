@@ -7,7 +7,7 @@ const Navbar = () => {
   const location = useLocation();
 
   // Get the index of the currently active link based on the route
-  const activeIndex = ["home", "resources", "events", "contact"].indexOf(
+  const activeIndex = [ "resources", "events", "contact"].indexOf(
     location.pathname.split("/")[1]
   );
 
@@ -22,7 +22,6 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { name: "Home", path: "/home" },
     { name: "Resources", path: "/resources" },
     { name: "Events", path: "/events" },
     { name: "Contact", path: "/contact" },

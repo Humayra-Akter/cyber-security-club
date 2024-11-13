@@ -114,7 +114,7 @@ const Resources = () => {
                 padding: "10px 20px",
                 borderRadius: "5px",
                 border: "none",
-                backgroundColor: "#1c6f6a",
+                backgroundColor: "#0f0f0f",
                 color: "#66fcf1",
                 fontWeight: "bold",
                 cursor: "pointer",
